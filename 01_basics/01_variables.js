@@ -23,6 +23,7 @@ let accountSate;
     //here accountEmail value is changed for global ref irrespective of it being defined with -- let 
     //As it did not found a new declaration it pointed to memory loc in the outer scope 
     console.log(accountEmail)
+    var accountPassword = "xxx";
 }
 
 
