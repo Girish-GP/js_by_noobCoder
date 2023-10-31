@@ -34,5 +34,11 @@
 // console.log(Math.min(4,33,42,45,2))
 // console.log(Math.max(4,33,42,45,2))
 
-console.log(Math.random())// 0 - 1
-console.log(Math.floor((Math.random()*10)) + 1) // 1 - 10
+// console.log(Math.random())// 0 - 1 ke andhar ke values dete hai 
+// console.log(Math.floor(Math.random()*10))// 0,1,2,3,4,5,6,7,8,9
+console.log(Math.floor((Math.random()*10)) + 1) // 1,2,3,4,5,6,7,8,9,10  // to avoid 0 we added one
+
+//Min & Max
+const min = 30
+const max = 40
+console.log(Math.floor((Math.random()*(max-min+1) )+ min))
