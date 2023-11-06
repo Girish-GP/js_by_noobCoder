@@ -31,6 +31,9 @@ const myn1 = myArr2.slice(1,3)
 console.log("B",myArr2)
 
 //splice changes original array
-const myn2 = myArr2.splice(1,3)
+const myn2 = myArr2.splice(1,4)
 console.log("B",myArr2)
 console.log(myn1,myn2)
+
+
+
