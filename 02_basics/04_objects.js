@@ -61,3 +61,7 @@ const dataObj = [
 ]
 
 console.log(dataObj[1].age)
+
+//hasOwnProperty()
+console.log(dataObj[0]?.hasOwnProperty('name')) //true
+console.log(dataObj[0]?.hasOwnProperty('gender')) //false
