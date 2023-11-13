@@ -36,9 +36,9 @@ const obj2 ={
 const obj3 = { ...obj1 , ...obj2}
 // console.log(obj3)
 
-console.log(Object.keys(instaUser)) //[ 'id', 'email', 'isLoggedIn', 'name' ]
-console.log(Object.values(instaUser))//[ 1, 'xyz@gmail.com', false, 'ggp' ]
-console.log(Object.entries(instaUser))//[[ 'id', 1 ],[ 'email', 'xyz@gmail.com' ],[ 'isLoggedIn', false ],[ 'name', 'ggp' ]]
+// console.log(Object.keys(instaUser)) //[ 'id', 'email', 'isLoggedIn', 'name' ]
+// console.log(Object.values(instaUser))//[ 1, 'xyz@gmail.com', false, 'ggp' ]
+// console.log(Object.entries(instaUser))//[[ 'id', 1 ],[ 'email', 'xyz@gmail.com' ],[ 'isLoggedIn', false ],[ 'name', 'ggp' ]]
 
 
 //When Data comes form backend
@@ -60,8 +60,41 @@ const dataObj = [
     },
 ]
 
-console.log(dataObj[1].age)
+// console.log(dataObj[1].age)
 
 //hasOwnProperty()
-console.log(dataObj[0]?.hasOwnProperty('name')) //true
-console.log(dataObj[0]?.hasOwnProperty('gender')) //false
+// console.log(dataObj[0]?.hasOwnProperty('name')) //true
+// console.log(dataObj[0]?.hasOwnProperty('gender')) //false
+
+
+//Destructing Objects
+
+const course = {
+    title : "React Course",
+    duration : "6 Months",
+    author :"John Doe",
+    price: 1000
+}
+const {title: t, duration , author , price} = course
+// console.log(title);
+console.log(t);
+console.log(duration)
+console.log(author)
+console.log(price)
+
+//json data from apis
+// {
+//  "name": "ggp",
+//  "courseName":"ajdac",
+//  "price": "100"
+// }
+
+
+// [
+//     {},
+//     {}
+// ]
+
+
+
+
