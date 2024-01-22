@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+     const tempParent = document.querySelector('.parent')
+     console.log(tempParent);
+
+     //Children
+     console.log(tempParent.children);//'{"0":{},"1":{},"2":{},"3":{},"4":{}}'
+     console.log(tempParent.childNodes);//'{"0":{},"1":{},"2":{},"3":{},"4":{},"5":{},"6":{},"7":{},"8":{},"9":{},"10":{},"11":{},"12":{}}'
+     // text comment text div text div text div text div text div text
+     //children gives only element nodes --> HTMLCollection
+     //childNodes gives all nodes i.e text nodes & element nodes --> NodeList
+
+     const arrFromHTML = Array.from(tempParent.children);
+     arrFromHTML.forEach((element) => {console.log(element.innerText); 
+     console.log(element.innerHTML)});
+     
+     console.log(tempParent.firstChild)//text node
+     console.log(tempParent.firstElementChild)//div.day --> Monday
+     console.log(tempParent.lastChild)//text node
+     console.log(tempParent.lastElementChild)//div.day --> friday
+
+     tempParent.parentElement; //body
+     tempParent.parentNode; //body
+     tempParent.nextElementSibling; //script
+     tempParent.nextSibling;//text node --> enter 
+
+</script>
+</html>
