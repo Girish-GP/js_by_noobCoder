@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulate DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    const listItem = document.createElement('li')
+    listItem.innerHTML = 'Python'
+    const ulList = document.querySelector('ul')
+    console.log(ulList)
+    // ulList.appendChild(listItem)
+
+    // ulList.removeChild(listItem)
+
+    
+    function createListItem(parent,text){
+      const listItem = document.createElement('li');
+    //   listItem.innerText = text;
+
+      //optimized code --> innerText ke pura node tree traverse hota which takes time for larger dom tree
+      listItem.appendChild(document.createTextNode(text))
+      parent.appendChild(listItem)
+    }
+
+    createListItem(ulList,'Python')
+    createListItem(ulList,'Ruby')
+    createListItem(ulList,'C')
+    createListItem(ulList,'C++')
+    createListItem(ulList,'Java')
+
+
+    //Edit Element
+
+    const editItem = document.querySelector('li:nth-child(2)');
+    editItem.style.color = 'red'
+    editItem.style.background = 'yellow'
+    const newli =document.createElement('li')
+    newli.appendChild(document.createTextNode('mojo'))
+    editItem.replaceWith(newli)
+</script>
+</html>

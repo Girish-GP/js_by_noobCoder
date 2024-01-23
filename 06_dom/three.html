@@ -26,10 +26,32 @@
     div.style.background = 'yellow'
     div.style.color = 'red'
     div.style.padding = '10px'
-    // div.innerText = 'How are you';
+    // div.innerText = 'How are you'; // this kind of things overwrites the original value present there & it also makes a round a round trip matlab uski value ko leke aayega and then usko overwrite kar dega
     const addText = document.createTextNode('Chai aur code');
     div.appendChild(addText);
+    
     document.body.appendChild(div)
+
+    //create a div element
+    const div2 = document.createElement('div');
+    div2.setAttribute('id','my-div')
+    div2.setAttribute('className','div-class');
+    div2.style.color = 'red'
+    div2.style.margin  = '10px'
+    div2.style.background = 'green'
+    div2.style.fontSize = '20px'
+    div2.style.padding = '10px'
+    // div2.innerText = 'Be a Better human'
+    //create a text node
+    const text = document.createTextNode('Lets go boii')
+    div2.appendChild(text)
+     
+    //custom attribute
+    div2.setAttribute('super','633737')
+
+    document.body.appendChild(div2)
+
+    
 
 </script>
 </html>
