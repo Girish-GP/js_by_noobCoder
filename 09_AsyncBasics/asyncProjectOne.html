@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Events</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //Window Objects mai setTimout function hota hai 
+    //setTimeout setInterval clearTimeout clearInterval
+    const sayName = ()=>{
+     console.log("GGP");
+     document.querySelector('h1').innerHTML = 'Best JS Series'
+    }
+    const changeMe = setTimeout(sayName,2000);//setTimeout hold in a variable 
+
+    document.getElementById('stop').addEventListener('click',()=>{
+        clearTimeout(changeMe);//setTimeout ref passed to clearTimeout
+    })
+</script>
+</html>
