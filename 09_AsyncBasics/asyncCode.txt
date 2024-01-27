@@ -29,3 +29,4 @@ Let say we have to read a file and store it somewhere and whether it is successf
 But lets say we after storing data based upon whether it is success or failure we have to perform the next operation --- here the reading file async will result in errors
 
 
+Js engine is synchronous but js ka runtime env allows asynchronous operation
