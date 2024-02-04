@@ -12,7 +12,7 @@ function setIUserName(userName){
 function createUser(userName,password,age){
     // setIUserName(userName) // scenario 1
     setIUserName.call(this,userName) // scenario 2
-    //Idhar hamne call use karke setIusername ko createUser ka this refer karne ko bola because of the userName which is set in setIUserName function will be attach to this of createUser function
+    //Idhar hamne call use karke setIusername ko createUser ka this refer karne ko bola because of that the userName which is set in setIUserName function will be attach to this of createUser function
     this.password = password
     this.age = age
 }
