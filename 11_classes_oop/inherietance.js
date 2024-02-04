@@ -7,6 +7,10 @@ class Animal {
     displayType(){
         console.log(`Type of animal : ${this.type}`)
     }
+
+    static createID(){
+        return '1223'
+    }
 }
 
 class Bird extends Animal{
@@ -29,3 +33,5 @@ console.log(bird1 === Bird) //false
 console.log(bird1 === Animal)//false
 console.log(bird1 instanceof Bird)//true
 console.log(bird1 instanceof Animal)//true
+
+bird1.createID() // as it is a static method it is not accessible to instances made from parent or its child
