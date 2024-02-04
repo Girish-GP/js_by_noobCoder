@@ -21,3 +21,22 @@ const user = new createUser('GGP','2233',24)
 
 console.log(user) //createUser { password: '2233', age: 24 } scenario 1
 //createUser { userName: 'GGP', password: '2233', age: 24 } scenario 2
+
+
+function Org(orgName){
+  this.orgName = orgName;
+}
+
+function Employee(orgName,name,designation,employeeId){
+  // Org(orgName);
+  Org.call(this,orgName)
+  this.name = name;
+  this.designation = designation;
+  this.employeeId = employeeId;
+
+}
+
+
+const employee1 = new Employee('jpl','girish','UI dev',500146)
+
+console.log(employee1)
