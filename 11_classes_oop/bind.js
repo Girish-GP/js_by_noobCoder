@@ -43,3 +43,5 @@ function callCallback(callback) {
 const boundCallback2 = person.sayHello.call(person);
 console.log(boundCallback2) // undefined
 // callCallback(boundCallback2); 
+
+//If you were to use call() in this specific case, it wouldn't solve the issue because call() is used for immediate invocation of a function, and it does not create a new function with a bound context like bind() does.
