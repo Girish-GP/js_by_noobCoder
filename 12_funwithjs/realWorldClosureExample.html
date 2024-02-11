@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // document.getElementById('orange').addEventListener('click',()=>{
+    //     document.body.style.backgroundColor = `orange`
+    // })
+    // document.getElementById('green').addEventListener('click',()=>{
+    //     document.body.style.backgroundColor = `green`
+    // })
+
+    //above is ok when there are limited buttons but consider a scenario where there are more
+
+    function handleClick(color){
+        // document.body.style.backgroundColor = `${color}`
+
+        return function(){
+                    document.body.style.backgroundColor = `${color}`
+
+        }
+    }
+    document.getElementById('orange').addEventListener('click',handleClick('orange'))
+    document.getElementById('green').addEventListener('click',handleClick('green'))
+</script>
+</html>
