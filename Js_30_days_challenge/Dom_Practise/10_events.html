@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <div></div>
+   <p id="first-para">Hi there</p>
+   <button onclick="updateFirstPara()">Update Paragraph</button>
+   <br>
+   <br>
+   <br>
+   <br>
+   <button ondblclick="toggleImgVisisbility()">Toggle Image</button>
+   <div> 
+    <img id="img-visibility" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/psl5omq5vuhdlrdosp77"></img>
+</div>
+<div>
+    <h1 id="change-bgColor" onmouseover="changeBGcolor()" onmouseout="resetBGcolor()">Doom doom</h1>
+</div>
+<form action="" id="my-form">
+   <input id="form-input" type="text"  onkeydown="inputChangeLogKey(event)" onkeyup="inputChangeLogValue(event)">
+   <button type="submit">Submit</button>
+   <div>
+    <label for="fruits">Select Fruits</label>
+    <div>
+        <select name="fruits" id="" onchange="logSelected(event)">
+            <option value="Mango">Mango</option>
+            <option value="Orange">Orange</option>
+            <option value="Grapes">Grapes</option>
+            <option value="Papaya">Papaya</option>
+            <option value="JackFruit">JackFruit</option>
+           </select>
+    </div>
+   </div>
+   
+</form>
+</body>
+<script src="10_events.js"></script>
+</html>
