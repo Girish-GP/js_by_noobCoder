@@ -41,7 +41,28 @@ document.getElementById('my-form').addEventListener('submit',function(event){
    event.preventDefault();
    console.log(document?.getElementById('form-input')?.value)
 })
-
+//8
 function logSelected(event){
     console.log(event.target.value)
 }
+
+//9
+// document?.getElementById('parent').addEventListener('click',function($event){
+//  console.log($event?.target?.textContent)
+// })
+
+//10
+document.getElementById('btn').addEventListener('click', function () {
+    const li = document.createElement('li');
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = 'Dummy';
+    li.appendChild(input);
+    document.getElementById('parent').appendChild(li);
+  });
+
+  document.getElementById('parent').addEventListener('change', function(event) {
+    if (event.target && event.target.nodeName === 'INPUT' && event.target.type === 'text') {
+      console.log('Input changed to:', event.target.value);
+    }
+  });
