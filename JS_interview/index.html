@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/rxjs@7/dist/bundles/rxjs.umd.min.js"></script>
+
+    <script>
+      const { Observable} = rxjs;
+    const { tap, map } = rxjs.operators;
+
+      const customObservable = new Observable((subscriber) => {
+        subscriber.next("Data 1");
+        setTimeout(() => subscriber.next("Data 2"), 2000);
+        setTimeout(() => subscriber.next("Data 3"), 4000);
+      }).pipe(
+        tap((res) => console.log("Before transformation", res)),
+        map((res) => `After transformation ${res}_done`)
+      );
+
+      const subscription = customObservable.subscribe({
+        next: (res) => console.log(res),
+        // error: (error) => console.error(error),
+        complete: () => {
+          console.log("completed");
+          subscription.unsubscribe();
+        },
+      });
+    </script>
+    <script src="pollyfills.js"></script>
+  </body>
+</html>
+
+<!-- 
+
+• An Observable represents a stream of values over time. It can emit
+multiple values asynchronously, including errors or completion
+notifications.
+• It is lazy, meaning it doesn’t start producing values until subscribed to.
+• Observables support operations like map, filter, and more to transform
+stream
+
+
+UMD stands for Universal Module Definition.
+It’s a JavaScript module format that works in any environment:
+
+Browser (script tag) → attaches a global object to window.
+
+Node.js (CommonJS) → works with require().
+
+AMD (Asynchronous Module Definition, e.g. RequireJS) → works with define().
+
+👉 That’s why it’s called universal — one build works everywhere.
+
+
+
+
+
+
+
+
+
+
+An observable represent a stream of data that is emitted over a time asynchronously
+It does not start producing values until it is subscribed
+It supports data stream tranformation operators like map filter
+-->
+<!-- UMD universal modi -->
