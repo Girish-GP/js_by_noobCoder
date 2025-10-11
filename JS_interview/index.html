@@ -4,8 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" />
     <title>Document</title>
+    <style>
+      body{
+        height: 150vh
+      }
+    </style>
   </head>
   <body>
+    <div id="parent">
+      Parent 
+      <div id="child">
+        Child
+      </div>
+    </div>
+
+    <ul id="list">
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ul>
+
+    <div class="parent">
+  Parent
+  <div class="child">Child</div>
+</div>
+<hr>
+<!-- Debounce -->
+  <label for="search">Search</label>
+  <input id="search-input" type="text" name="search" />
+  <p id="search-text">Searching for ... </p>
+<hr>
+<script src="debounce.js"></script>
+<script src="throttle.js"></script>
+<script>
+  document.querySelector('.parent').addEventListener('mouseover',  () => console.log('mouseover on parent'));
+  document.querySelector('.parent').addEventListener('mouseenter', () => console.log('mouseenter on parent'));
+  document.querySelector('.child').addEventListener('mouseover',  () => console.log('mouseover on child'));
+  document.querySelector('.child').addEventListener('mouseenter', () => console.log('mouseenter on child'));
+</script>
+
+    <script src="domEvents.js"></script>
     <script src="https://unpkg.com/rxjs@7/dist/bundles/rxjs.umd.min.js"></script>
 
     <script>
